@@ -12,8 +12,8 @@ OPENFACTS_AVAILABLE_PROJECTS ||= %w{
   openfoodfacts
 }
 
-OPENFACTS_PROJECTS ||= ENV.fetch('OPENFACTS_LOCALE', OPENFACTS_AVAILABLE_PROJECTS.join(','))
-                        .split(',').map(&:strip) &
+OPENFACTS_PROJECTS ||= [ENV.fetch('OPENFACTS_PROJECTS', OPENFACTS_AVAILABLE_PROJECTS.join(',')).
+                        split(',').map(&:strip)].flatten &
                           OPENFACTS_AVAILABLE_PROJECTS
 
 OPENFACTS_PROJECTS.each do |project|
@@ -31,7 +31,7 @@ OPENFACTS_AVAILABLE_LOCALES ||= OPENFACTS_LIBS.map { |lib|
 } + ['world']
 
 OPENFACTS_LOCALE ||= ([ENV.fetch('OPENFACTS_LOCALE', 'world')] &
-                        OPENFACTS_AVAILABLE_LOCALES).first
+                          OPENFACTS_AVAILABLE_LOCALES).first
 
 OPENFACTS_PER_PAGE ||= 20
 
