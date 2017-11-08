@@ -1,0 +1,24 @@
+{
+  "name": "Open Food Facts Games",
+  "description": "Games to complete data on Open Food Facts",
+  "website": "https://openfoodfacts.org/",
+  "repository": "https://github.com/openfoodfacts/ruby-games",
+  "image": "heroku/ruby",
+  "env": {
+    "OPENFACTS_ANONYMOUS_USER_ID": {
+      "value": "hungergames",
+      "required": true
+    },
+    "OPENFACTS_ANONYMOUS_USER_PASSWORD": {
+      "required": true
+    },
+    "OPENFACTS_LOCALE": {
+      "value": "world",
+      "required": false
+    },
+    "RACK_ENV": {
+      "value": "production",
+      "required": false
+    }
+  }
+}

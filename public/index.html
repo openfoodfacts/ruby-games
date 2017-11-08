@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenFacts Completion</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    var loading = $("#loading");
+    var work = $("#work");
+    var productForm = $("#productForm");
+
+    function loadProduct() {
+        work.hide();
+        loading.show();
+
+        $.getJSON( "api/products_with_quantity_to_be_completed.json", function( data ) {
+            console.log('data ', data);
+            console.log('API URL ', data.url);
+
+            if (!data.product_name || data.product_name === "") // Try again
+                return loadProduct();
+
+            var url = "https://world.openfoodfacts.org/product/" + data.code;
+            console.log('URL ', url);
+
+            if (!data.images || data.images.length === 0) // Try again
+                return loadProduct();
+
+            var imageKeys = ['image_front_url', 'image_ingredients_url', 'image_nutrition_url'];
+            var images = [];
+            $.each( imageKeys, function( key, imageKey ) {
+                if (data[imageKey]) {
+                    images.push( "<a href='" + url + "' target='_blank'><img src='" + data[imageKey] + "' /></a>" );
+                }
+            });
+
+            if (images.length === 0)
+                return loadProduct();
+
+            $('#productInfos').html(images.join( "<br />" ));
+            
+            productForm.find('#code').val(data.code);
+            productForm.find('#quantity').val('');
+
+            loading.hide();
+            work.show();
+
+            productForm.find('#quantity').focus();
+        });
+    }
+
+    function updateProduct(params, done) {
+        console.log('updateProduct.. params ', params);
+
+        work.hide();
+        loading.show();
+
+        $.post( "api/update", params)
+            .done(function( data ) {
+                console.log("Updated params ", params);
+
+                loadProduct();
+            });
+    }
+
+    function skipProduct() {
+        loadProduct();
+    }
+
+    $("#skipProduct").click(function(){
+        skipProduct();
+    });
+
+    productForm.submit(function(event){
+        event.preventDefault();
+
+        updateProduct({
+            code: productForm.find('#code').val(),
+            quantity: productForm.find('#quantity').val()
+        }, loadProduct);
+
+        return false;
+    });
+
+    // init
+    loadProduct();
+
+});
+</script>
+
+</head>
+<body>
+
+    <h1>OpenFacts Completion</h1>
+    <h2>Quantity ?</h2>
+
+    <div id="loading">
+        <p>Loading ...</p>
+    </div>
+
+    <div id="work" style="display: none">
+        <div id="productInfos">
+        </div>
+        <hr />
+
+        <form id="productForm">
+            <input id="code" type="hidden" name="code" value="" />
+
+            <input id="quantity" type="string" name="quantity" placeholder="30 g / 10 mL / 2 x 90 mg" size="35" focus="focus" autocomplete="off" />
+
+            <input type="submit" value="Update" />
+        </form>
+        <hr />
+
+        <button id="skipProduct">Skip</button>
+    </div>
+
+</body>
+</html>

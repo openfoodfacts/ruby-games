@@ -1,0 +1,4 @@
+- [ ] Display other product images than the tree selected
+- [ ] Manage Brand completion
+- [ ] Manage Name completion
+- [ ] Manage other fields completion (might have to adapt `Product#update` in `openfoodfacts-ruby`) https://en.wiki.openfoodfacts.org/Quick_completion
