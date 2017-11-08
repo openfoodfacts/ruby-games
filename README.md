@@ -1,7 +1,7 @@
-openfacts-completion
-====================
+ruby-games
+==========
 
-App to complete data of (Open Food Facts)[https://world.openfoodfacts.org] and (Open Beauty Facts)[https://world.openbeautyfacts.org].
+App to complete data of [Open Food Facts](https://world.openfoodfacts.org) and [Open Beauty Facts](https://world.openbeautyfacts.org).
 
 Project links :
 
