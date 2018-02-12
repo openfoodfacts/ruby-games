@@ -39,15 +39,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  foreman (~> 0.84.0)
-  openbeautyfacts (~> 0.5.0)
-  openfoodfacts (~> 0.5.0)
-  puma (~> 3.6.2)
-  sinatra (~> 2.0.0)
-  sinatra-contrib (~> 2.0.0)
+  foreman (~> 0.84)
+  openbeautyfacts (~> 0.5)
+  openfoodfacts (~> 0.5)
+  puma (~> 3.6)
+  sinatra (~> 2.0)
+  sinatra-contrib (~> 2.0)
 
 RUBY VERSION
    ruby 2.4.2p198
 
 BUNDLED WITH
-   1.15.4
+   1.16.1
