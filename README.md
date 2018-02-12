@@ -15,7 +15,7 @@ Project links :
 
 # Install
 
-- Ruby `2.4.2` (recommended via `rbenv` tool)
+- Ruby `>= 2.2.0` (latest recommended via `rbenv` tool)
 - `gem install bundler`
 - `bundle install`
 
