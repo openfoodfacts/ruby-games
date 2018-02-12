@@ -1,6 +1,8 @@
 ruby-games
 ==========
 
+[![Build Status](https://travis-ci.org/openfoodfacts/ruby-games.svg?branch=master)](https://travis-ci.org/openfoodfacts/ruby-games)
+
 App to complete data of [Open Food Facts](https://world.openfoodfacts.org) and [Open Beauty Facts](https://world.openbeautyfacts.org).
 
 Project links :
