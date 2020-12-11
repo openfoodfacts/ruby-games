@@ -18,7 +18,7 @@ GEM
       hashie (~> 3.4)
       nokogiri (~> 1.7)
     puma (3.6.2)
-    rack (2.2.2)
+    rack (2.2.3)
     rack-protection (2.0.1)
       rack
     ruby2_keywords (0.0.2)
