@@ -17,7 +17,7 @@ GEM
     openfoodfacts (0.5.1)
       hashie (~> 3.4)
       nokogiri (~> 1.7)
-    puma (3.6.2)
+    puma (3.12.6)
     rack (2.2.3)
     rack-protection (2.0.1)
       rack
@@ -44,7 +44,7 @@ DEPENDENCIES
   foreman (~> 0.84)
   openbeautyfacts (~> 0.5)
   openfoodfacts (~> 0.5)
-  puma (~> 3.6)
+  puma (~> 3.12)
   sinatra (~> 2.0)
   sinatra-contrib (~> 2.0)
 
