@@ -10,5 +10,5 @@ gem 'openbeautyfacts', '~> 0.5'
 gem 'openfoodfacts', '~> 0.5'
 
 group :development, :test do
-    gem 'foreman', '~> 0.84'
+    gem 'foreman', '~> 0.87'
 end
