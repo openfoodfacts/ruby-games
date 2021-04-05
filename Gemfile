@@ -7,7 +7,7 @@ gem 'sinatra', '~> 2.1'
 gem 'sinatra-contrib', '~> 2.1'
 
 gem 'openbeautyfacts', '~> 0.5'
-gem 'openfoodfacts', '~> 0.5'
+gem 'openfoodfacts', '~> 0.6'
 
 group :development, :test do
     gem 'foreman', '~> 0.87'
