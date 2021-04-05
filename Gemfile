@@ -6,7 +6,7 @@ gem 'puma', '~> 5.2'
 gem 'sinatra', '~> 2.1'
 gem 'sinatra-contrib', '~> 2.1'
 
-gem 'openbeautyfacts', '~> 0.5'
+gem 'openbeautyfacts', '~> 0.6'
 gem 'openfoodfacts', '~> 0.6'
 
 group :development, :test do

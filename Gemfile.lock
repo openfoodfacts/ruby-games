@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     foreman (0.87.2)
-    hashie (3.6.0)
+    hashie (4.1.0)
     mini_portile2 (2.5.0)
     multi_json (1.15.0)
     mustermann (1.1.1)
@@ -11,8 +11,8 @@ GEM
     nokogiri (1.11.2)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    openbeautyfacts (0.5.1)
-      hashie (~> 3.4)
+    openbeautyfacts (0.6.0)
+      hashie (>= 3.4, < 5.0)
       nokogiri (~> 1.7)
     openfoodfacts (0.6.0)
       hashie (>= 3.4, < 5.0)
@@ -42,7 +42,7 @@ PLATFORMS
 
 DEPENDENCIES
   foreman (~> 0.87)
-  openbeautyfacts (~> 0.5)
+  openbeautyfacts (~> 0.6)
   openfoodfacts (~> 0.6)
   puma (~> 5.2)
   sinatra (~> 2.1)
