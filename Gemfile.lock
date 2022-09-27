@@ -5,7 +5,7 @@ GEM
     hashie (4.1.0)
     mini_portile2 (2.8.0)
     multi_json (1.15.0)
-    mustermann (2.0.2)
+    mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
     nokogiri (1.13.6)
@@ -21,19 +21,19 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
-    rack-protection (2.2.2)
+    rack-protection (3.0.1)
       rack
     ruby2_keywords (0.0.5)
-    sinatra (2.2.2)
-      mustermann (~> 2.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.2)
+    sinatra (3.0.1)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.1)
       tilt (~> 2.0)
-    sinatra-contrib (2.2.2)
+    sinatra-contrib (3.0.1)
       multi_json
-      mustermann (~> 2.0)
-      rack-protection (= 2.2.2)
-      sinatra (= 2.2.2)
+      mustermann (~> 3.0)
+      rack-protection (= 3.0.1)
+      sinatra (= 3.0.1)
       tilt (~> 2.0)
     tilt (2.0.11)
 
@@ -45,8 +45,8 @@ DEPENDENCIES
   openbeautyfacts (~> 0.6)
   openfoodfacts (~> 0.6)
   puma (~> 5.6)
-  sinatra (~> 2.2)
-  sinatra-contrib (~> 2.2)
+  sinatra (~> 3.0)
+  sinatra-contrib (~> 3.0)
 
 RUBY VERSION
    ruby 2.4.2p198
