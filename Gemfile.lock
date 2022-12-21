@@ -17,7 +17,7 @@ GEM
     openfoodfacts (0.6.2)
       hashie (>= 3.4, < 6.0)
       nokogiri (~> 1.7)
-    puma (6.0.0)
+    puma (6.0.1)
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
