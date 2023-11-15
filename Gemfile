@@ -3,8 +3,8 @@ ruby '>= 2.2.0'
 
 gem 'puma', '~> 6.4'
 
-gem 'sinatra', '~> 3.0'
-gem 'sinatra-contrib', '~> 3.0'
+gem 'sinatra', '~> 3.1'
+gem 'sinatra-contrib', '~> 3.1'
 
 gem 'openbeautyfacts', '~> 0.6'
 gem 'openfoodfacts', '~> 0.6'
