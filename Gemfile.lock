@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     base64 (0.2.0)
-    foreman (0.87.2)
+    foreman (0.88.1)
     hashie (4.1.0)
     mini_portile2 (2.8.5)
     multi_json (1.15.0)
@@ -46,7 +46,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  foreman (~> 0.87)
+  foreman (~> 0.88)
   openbeautyfacts (~> 0.6)
   openfoodfacts (~> 0.6)
   puma (~> 6.4)
